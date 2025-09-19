@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: whitesmoke;
+    background: rgba(57,131,123);
+    background: linear-gradient(rgb(34,160,148) 30%, rgb(12,71,65));
+    height: 100vh;
+    gap: 50px;
+}
+
+.container {
+    width: 420px;
+    height: 560px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+    inset: 0 0 40px rgba(255,255,255,0.05);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.form-box {
+    width: 200%;
+    height: 100%;
+    display: flex;
+    transition: transform 1s cubic-bezier(0.77,0,0.175,1);
+}
+
+.form {
+    width: 50%;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.form h2 {
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 25px;
+    text-shadow: 0 0 25px rgba(200,150,255,0.06);
+    letter-spacing: 1px;
+}
+
+.container.sign-in .form-box {
+    transform: translateX(0);
+}
+.container.sign-up .form-box {
+    transform: translateX(-50%);
+}
